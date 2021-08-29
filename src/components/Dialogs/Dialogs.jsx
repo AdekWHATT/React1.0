@@ -2,9 +2,15 @@ import s from './Dialogs.module.css';
 import {NavLink} from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/MessageItem";
-
+import React from "react";
 
 const Dialogs = (props) => {
+
+    let newMessageElement = React.createRef();
+    let addMess = () => {
+        let mess = newMessageElement.current.value
+        alert(mess)
+    }
 
     let dialogsElements = props.dialogs
         .map(d => <DialogItem name={d.name} id={d.id}/>)
@@ -21,6 +27,12 @@ const Dialogs = (props) => {
             </div>
             <div className={s.messages}>
                 {messagesElements}
+            </div>
+            <div>
+            <textarea ref={newMessageElement}></textarea>
+            </div>
+            <div>
+            <button onClick={addMess}>Отправить сообщение</button>
             </div>
         </div>
     )
