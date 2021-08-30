@@ -1,5 +1,7 @@
-import {renderEntireThree} from "../render";
 
+let renderEntireThree = () => {
+
+}
 
 let state = {
     profilePage: {
@@ -35,7 +37,7 @@ let state = {
 
     
 }
-export let addPost = (postMessage) => {
+export const addPost = () => {
 
     let newPost = {
         id: 5,
@@ -43,16 +45,21 @@ export let addPost = (postMessage) => {
         likesCount: 0
     };
     state.profilePage.posts.push(newPost)
-    renderEntireThree(state)
+    renderEntireThree()
 }
 
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText
 renderEntireThree(state)
 };
+
+export const subscripe = (observer) => {
+    renderEntireThree = observer;
+}
+
+
+
 export default state;
 
 
-
-// Изменения созданы для проверки git и изменения веток
