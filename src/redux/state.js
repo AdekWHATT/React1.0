@@ -31,6 +31,7 @@ let state = {
         ]
     }
 
+    
 }
 export let addPost = (postMessage) => {
 
