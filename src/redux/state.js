@@ -52,3 +52,7 @@ export let updateNewPostText = (newText) => {
 renderEntireThree(state)
 };
 export default state;
+
+
+
+// Изменения созданы для проверки git и изменения веток
