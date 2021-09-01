@@ -11,11 +11,7 @@ const MyPosts = (props) => {
 
 
     let addPost = () => {
-
-        let text = newpostElement.current.value
-        props.addPost(text)
-        props.updateNewPostText("") // обнуление textarea
-
+        props.addPost();
     }
     let onPostChange = () => {
         let text = newpostElement.current.value
