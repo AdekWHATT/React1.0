@@ -6,7 +6,7 @@ const ProfileInfo = () => {
         <div>
             <div>
                 <img className={c.image_1}
-                     src="https://www.railway-technology.com/wp-content/uploads/sites/24/2020/10/Feature-Image-Top-ten-rail-operators-in-2020.jpg"></img>
+                     src="https://www.firestock.ru/download/s/defct9pjnmz6pkn/805.jpg"></img>
             </div>
             <div className={c.descriptionBlock}>
                 Ava + Description
