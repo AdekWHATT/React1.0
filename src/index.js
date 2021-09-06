@@ -4,15 +4,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import store, {addPost, subscribe, updateNewPostText} from "./redux/state";
+import {BrowserRouter} from "react-router-dom";
 
 let renderEntireThree = (state) => {
     ReactDOM.render(
-        <React.StrictMode>
+        <BrowserRouter>
             <App state={state}
                  dispatch={store.dispatch.bind(store)}
                  store={store}
                  />
-        </React.StrictMode>,
+        </BrowserRouter>,
         document.getElementById('root')
     )
 }
